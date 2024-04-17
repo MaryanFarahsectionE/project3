@@ -1,0 +1,75 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f0f9; /* Light pink background for the whole page */
+    color: #212529; /* Dark grey text color for contrast */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #ffccd5; /* Light pink border */
+}
+
+header h1 {
+    font-size: 28px;
+    color: #ff69b4; /* Vibrant pink color for the main title */
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06); /* Subtle shadow for depth */
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+section h2 {
+    font-size: 22px;
+    color: #ff69b4; /* Matching pink color for subheadings */
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ffccd5; /* Light pink underline for headings */
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 15px;
+}
+
+li {
+    background-color: #ffefff; /* Very light pink background for list items */
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border-left: 5px solid #ff69b4; /* Pink border accent on list items */
+}
+
+p, li {
+    font-size: 16px;
+}
+
+a {
+    color: #ff69b4;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}

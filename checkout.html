@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - My Kitty Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>    <div class="checkout-container">
+    <h1>Secure Checkout</h1>
+    <p class="security-assurance">🔒 Your information is securely encrypted. Our site uses SSL encryption to protect your personal data.</p>
+
+
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form action="process_checkout.php" method="POST">
+            <div class="form-section">
+                <h2>Billing Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State/Province:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="zip">Postal Code:</label>
+                <input type="text" id="zip" name="zip" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="Canada">Canada</option>
+                    <option value="United States">United States</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+            <div class="payment-details">
+                <h2>Payment Details</h2>
+                <label for="card-name">Cardholder's Name:</label>
+                <input type="text" id="card-name" name="card-name" required>
+            
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required pattern="(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})" placeholder="Valid Visa or Mastercard Number">
+                <div class="card-logos">
+                    <img src="kisspng-visa-logo-mastercard-credit-card-payment-5b15b13e347986.454908321528148286215.jpg" alt="Visa" style="height: 30px;">
+                    <img src="mastercard.jpg" alt="Mastercard" style="height: 30px;">
+                </div>
+            
+                <label for="expiry">Expiry Date:</label>
+                <input type="month" id="expiry" name="expiry" required>
+            
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" name="cvc" required>
+            </div>
+            <form id="checkoutForm">
+                <!-- Form fields as defined previously -->
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+            
+    <script>
+document.getElementById('checkoutForm').onsubmit = function(event) {
+    event.preventDefault(); // Prevent the actual form submission
+    const cardNumber = document.getElementById('card-number').value;
+    const visaMasterCardRegex = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/;
+
+    if (!visaMasterCardRegex.test(cardNumber)) {
+        alert('Please enter a valid Visa or Mastercard number.');
+        return;
+    }
+
+    // Assuming AJAX call or similar for form processing
+    // Show success message or handle next steps
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank you for your order!',
+        text: 'Your order has been placed and a confirmation email has been sent.',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'index.html'; // Redirect after handling
+        }
+    });
+};
+
+    </script>
+
+</body>
+</html>

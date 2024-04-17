@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Kitty Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reservations.css">
+</head>
+<body>
+    <div class="additional-links">
+    <a href="checkout.html" class="btn">Checkout</a>
+    <a href="account.html" class="btn">My Account</a>
+    <a href="rules.html" class="btn">Rules & Regulations</a>
+    <a href="privacy.html" class="btn">Privacy Policy</a>
+    <a href="refund.html" class="btn">Refund Policy</a>
+</div>
+
+    <div class="booking-container">
+        <h1>Book Your Kitty Time</h1>
+        <p>$10 per person, under 2 years old free</p>
+        
+        <div class="booking-info">
+            <p>Kids 14 and under are not allowed in the cat lounge on Saturdays and Sundays. No refunds or rescheduling if you arrive with anyone 14 and under.</p>
+            <p>Your time starts on the hour and ends 10 minutes to the next hour. Please be on time as there will not be any extended time.</p>
+            <p>Booking online guarantees a space. Walk-ins may join if there are spaces available.</p>
+            <p>Please do not expect kitties to entertain you, as they are here to find forever homes.</p>
+            <p>Kids 14 and under must be accompanied by an adult on weekdays.</p>
+            <p>Not all areas may be accessed by all visitors when there are new kitties.</p>
+            <p>Socks are mandatory at all times.</p>
+            <p>PCON/volunteers may be present to do kitty chores.</p>
+        </div>
+        
+        <h2>Book Your Visit</h2>
+        <form action="process_booking.php" method="POST">
+            <label for="visitor">Visitor Options:</label>
+            <select id="visitor" name="visitor">
+                <option value="adult">Adult</option>
+                <option value="child">Child under 14</option>
+            </select>
+            
+            <label for="time">Time:</label>
+            <select id="time" name="time">
+                <option value="9am">9:00 AM</option>
+                <option value="10am">10:00 AM</option>
+                <!-- Add more options as needed -->
+            </select>
+            
+            <label for="persons">Number of Persons:</label>
+            <input type="number" id="persons" name="persons" min="1" max="10" value="1">
+            
+            <button type="submit">NEXT</button>
+        </form>
+    </div>
+
+    <p>Before booking your appointment, please review our <a href="rules.html">Rules & Regulations</a>.</p>
+</body>
+</html>

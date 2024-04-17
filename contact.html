@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Kitty Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        
+        <div class="contact-methods">
+            <p><strong>Call us:</strong> +1 234 567 890</p>
+            <p><strong>Email us:</strong> info@mykittycafe.com</p>
+            <p><strong>WhatsApp:</strong> +1 234 567 890</p>
+        </div>
+
+        <h2>Send us a message!</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Your message (optional):</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h2>Better yet, see us in person!</h2>
+        <p>The kitties are waiting for you 😻😻</p>
+
+        <address>
+            My Kitty Cafe<br>
+            117 Wyndham Street North<br>
+            Guelph, Ontario N1H 4E9<br>
+            Canada
+        </address>
+
+        <p><strong>Hours:</strong> Sunday to Thursday – 9am to 6pm<br>
+        Friday and Saturday – 9am to 8pm<br>
+        <strong>Closed:</strong> All statutory holidays.</p>
+    </div>
+</body>
+</html>
